@@ -1,0 +1,108 @@
+/* Newsletter Subscription Form Styles */
+.wns-subscribe-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid var(--flex-gray-15, #e5e5e5);
+    border-radius: var(--round-5, 8px);
+    background-color: var(--bg-color, #ffffff);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Default layout (stacked column) */
+.wns-subscribe-form-inline,
+.wns-subscribe-form-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* Email input with 3px bold black border */
+.wns-subscribe-form input[type="email"] {
+    width: 100%;
+    padding: var(--padding-40, 12px 16px);
+    line-height: var(--height-40, 1.4);
+    border: 3px solid #000000 !important; /* Bold black border */
+    border-radius: var(--round-3, 6px);
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: var(--bg-color, #ffffff);
+    color: #000000 !important;
+    transition: var(--effect, all 0.3s ease);
+    outline: none;
+}
+
+.wns-subscribe-form input[type="email"]:focus {
+    border-color: var(--g-color, #007cba) !important;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.1);
+}
+
+/* Invalid email styling */
+.wns-subscribe-form input[type="email"]:invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+/* Button Styling - Purple (#8224e3) by default, Black on hover */
+.wns-subscribe-form button,
+.wns-subscribe-form .wns-subscribe-btn {
+    width: 100%;
+    line-height: var(--height-40, 1.4);
+    padding: var(--padding-40, 12px 20px);
+    cursor: pointer;
+    transition: var(--effect, all 0.3s ease);
+    white-space: nowrap;
+    color: #ffffff !important; /* White text */
+    border: none;
+    border-radius: var(--round-3, 6px);
+    background: #8224e3 !important; /* Purple background */
+    box-shadow: none;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Hover Effect - Turns black */
+.wns-subscribe-form button:hover,
+.wns-subscribe-form .wns-subscribe-btn:hover {
+    background: #000000 !important; /* Black on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Email notice styling */
+.wns-email-notice {
+    font-size: 12px !important;
+    color: #666 !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    font-style: italic;
+}
+
+/* Message styling */
+.wns-message {
+    padding: 12px 16px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.wns-message.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.wns-message.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Loading state */
+.wns-subscribe-btn.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
